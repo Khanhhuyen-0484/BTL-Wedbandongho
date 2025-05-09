@@ -43,8 +43,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/men" className="text-gray-600 hover:text-green-600 transition-colors">Nam</Link>
-            <Link to="/women" className="text-gray-600 hover:text-green-600 transition-colors">Nữ</Link>
+            <Link to="/productmen" className="text-gray-600 hover:text-green-600 transition-colors">Nam</Link>
+            <Link to="/productfemale" className="text-gray-600 hover:text-green-600 transition-colors">Nữ</Link>
             <Link to="/smart-watches" className="text-gray-600 hover:text-green-600 transition-colors">Smart Watch</Link>
             <Link to="/collections" className="text-gray-600 hover:text-green-600 transition-colors">Bộ sưu tập</Link>
             <Link to="/brands" className="text-gray-600 hover:text-green-600 transition-colors">Thương hiệu</Link>

@@ -15,7 +15,9 @@ import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import ProfilePage from './pages/ProfilePage'; // Thêm import này
+import ProfilePage from './pages/ProfilePage'; 
+import ProductMen from './components/ProductMen';
+import ProductFemale from './components/ProductFemale';
 
 const HomePage = () => {
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -53,6 +55,8 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/productmen" element={<ProductMen />} />
+                <Route path="/productfemale" element={<ProductFemale />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
