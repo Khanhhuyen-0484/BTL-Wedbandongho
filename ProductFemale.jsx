@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Star, ShoppingCart, Heart, Filter, X } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
 import axios from 'axios';
-import { menProducts as localProducts } from '../data/product';
+import { menProducts as localProducts } from '../data/product2';
 
-const SmartWatch = () => {
+const ProductFemale = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,7 +35,7 @@ const SmartWatch = () => {
       rating: Math.min(5, Math.max(0, Number(product.rating) || 0))
     }));
   };
-  
+
   // Fetch products
   useEffect(() => {
     const fetchProducts = async () => {
@@ -135,7 +135,7 @@ const SmartWatch = () => {
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h2 className="text-2xl font-bold">Smart Watch</h2>
+          <h2 className="text-2xl font-bold">Female's Watches</h2>
           
           <div className="flex items-center gap-4">
             {dataSource && (
@@ -330,4 +330,4 @@ const SmartWatch = () => {
   );
 };
 
-export default SmartWatch;
+export default ProductFemale;
