@@ -6,10 +6,10 @@ import { useCart } from '../contexts/CartContext';
 const BrandList = () => {
   // Mảng các thương hiệu với tên và URL ảnh
   const brands = [
-    { name: 'Rolex', image: '/img/rolex.png' },
-    { name: 'Boss', image: '/img/1Balmain 2' },
+    { name: 'Rolex', image: '/img/rolex.jfif' },
+    { name: 'Boss', image: '/img/1Balmain 2.png' },
     { name: 'amazfit', image: '/img/1Balmain 3.png' },
-    { name: 'Audemars Piguet', image: '/img/AUDEMARS-PIGUET_1.png' },
+    { name: 'Audemars Piguet', image: '/img/images.png' },
     { name: 'DIESEL', image: '/img/1Balmain 5.png' },
     { name: 'Casio', image: '/img/1Balmain 4.png' },
     { name: 'BALMAIN', image: '/img/1Balmain 1.png' },
