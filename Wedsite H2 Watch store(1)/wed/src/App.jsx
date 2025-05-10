@@ -18,6 +18,8 @@ import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage'; 
 import ProductMen from './components/ProductMen';
 import ProductFemale from './components/ProductFemale';
+import PaymentPage from './components/PaymentPage';
+import OrderSuccess from './components/OrderSuccess';
 
 const HomePage = () => {
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -58,6 +60,8 @@ const App = () => {
                 <Route path="/productmen" element={<ProductMen />} />
                 <Route path="/productfemale" element={<ProductFemale />} />
                 <Route path="/cart" element={<CartPage />} />
+                <Route path="/payment" element={<PaymentPage />} />
+                <Route path="/order-success" element={<OrderSuccess />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 

@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext } from 'react';
 
 const CartContext = createContext();
@@ -36,6 +35,10 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
@@ -46,6 +49,7 @@ export const CartProvider = ({ children }) => {
         addToCart, 
         removeFromCart, 
         updateQuantity,
+        clearCart, // Thêm chức năng mới
         totalItems,
         totalPrice
       }}

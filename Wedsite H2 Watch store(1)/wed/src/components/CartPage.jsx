@@ -1,6 +1,6 @@
 // src/components/CartPage.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Thêm useNavigate
 import { useCart } from '../contexts/CartContext';
 import { X, Plus, Minus } from 'lucide-react';
 
@@ -13,6 +13,8 @@ const CartPage = () => {
     totalPrice
   } = useCart();
 
+  const navigate = useNavigate(); // Thêm hook này
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Your Shopping Cart</h1>
@@ -24,7 +26,7 @@ const CartPage = () => {
             to="/" 
             className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
           >
-            Continue Shopping
+            Tiếp tục mua sắm
           </Link>
         </div>
       ) : (
@@ -75,24 +77,28 @@ const CartPage = () => {
 
           {/* Tổng thanh toán */}
           <div className="bg-white rounded-lg shadow p-6 h-fit">
-            <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+            <h2 className="text-xl font-bold mb-4">Hóa Đơn</h2>
             <div className="space-y-4">
               <div className="flex justify-between">
-                <span>Items ({totalItems})</span>
+                <span>Sản phẩm ({totalItems})</span>
                 <span>${totalPrice.toFixed(2)}</span>
               </div>
               <div className="flex justify-between font-bold text-lg">
-                <span>Total</span>
+                <span>Tổng</span>
                 <span>${totalPrice.toFixed(2)}</span>
               </div>
-              <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">
-                Proceed to Checkout
+              {/* Sửa nút Thanh Toán thành dùng navigate */}
+              <button 
+                onClick={() => navigate('/payment')}
+                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700"
+              >
+                Thanh Toán
               </button>
               <Link 
                 to="/" 
                 className="block text-center text-blue-600 hover:underline mt-4"
               >
-                Continue Shopping
+                Tiếp tục mua sắm
               </Link>
             </div>
           </div>
