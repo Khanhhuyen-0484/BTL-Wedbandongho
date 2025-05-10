@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ShoppingCart, Heart, Filter, X } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
-import axios from 'axios';
-import { menProducts as localProducts } from '../data/product';
-
-import React from 'react';
 
 const BrandList = () => {
   // Mảng các thương hiệu với tên và URL ảnh
@@ -17,8 +13,6 @@ const BrandList = () => {
     { name: 'DIESEL', image: '/img/1Balmain 5.png' },
     { name: 'Casio', image: '/img/1Balmain 4.png' },
     { name: 'BALMAIN', image: '/img/1Balmain 1.png' },
-    { name: 'Hublot', image: 'https://example.com/hublot-logo.png' },
-    { name: 'Longines', image: 'https://example.com/longines-logo.png' }
   ];
 
   return (
