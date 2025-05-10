@@ -19,6 +19,7 @@ import ProfilePage from './pages/ProfilePage';
 import ProductMen from './components/ProductMen';
 import ProductFemale from './components/ProductFemale';
 import SmartWatch from './components/SmartWatch';
+import BrandList from './components/BrandList';
 
 const HomePage = () => {
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -58,7 +59,8 @@ const App = () => {
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/productmen" element={<ProductMen />} />
                 <Route path="/productfemale" element={<ProductFemale />} />
-                <Route path="/smartwatch" element={<SmartWatch />} />                
+                <Route path="/smartwatch" element={<SmartWatch />} />
+                <Route path="/brandlist" element={<BrandList />} />                
                 {/* Các route không cần đăng nhập */}
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/login" element={<LoginPage />} />
