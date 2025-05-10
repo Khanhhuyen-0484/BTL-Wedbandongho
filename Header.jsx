@@ -47,7 +47,7 @@ const Header = () => {
             <Link to="/productfemale" className="text-gray-600 hover:text-green-600 transition-colors">Nữ</Link>
             <Link to="/SmartWatch" className="text-gray-600 hover:text-green-600 transition-colors">Smart Watch</Link>
             <Link to="/collections" className="text-gray-600 hover:text-green-600 transition-colors">Bộ sưu tập</Link>
-            <Link to="/brands" className="text-gray-600 hover:text-green-600 transition-colors">Thương hiệu</Link>
+            <Link to="/BrandList" className="text-gray-600 hover:text-green-600 transition-colors">Thương hiệu</Link>
           </nav>
 
           {/* Right section - Search + Icons */}
