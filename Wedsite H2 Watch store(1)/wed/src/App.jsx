@@ -20,6 +20,7 @@ import ProductMen from './components/ProductMen';
 import ProductFemale from './components/ProductFemale';
 import PaymentPage from './components/PaymentPage';
 import OrderSuccess from './components/OrderSuccess';
+import Contact from './components/Contact';
 import { ToastContainer } from 'react-toastify'; // Thêm ToastContainer
 import 'react-toastify/dist/ReactToastify.css'; // Thêm CSS của react-toastify
 
@@ -62,6 +63,7 @@ const App = () => {
                 <Route path="/productmen" element={<ProductMen />} />
                 <Route path="/productfemale" element={<ProductFemale />} />
                 <Route path="/cart" element={<CartPage />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/payment" element={<PaymentPage />} />
                 <Route path="/order-success" element={<OrderSuccess />} />
                 <Route path="/login" element={<LoginPage />} />

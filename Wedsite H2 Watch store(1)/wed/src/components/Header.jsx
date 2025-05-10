@@ -57,13 +57,13 @@ const Header = () => {
               to="/productmen"
               className="text-gray-600 hover:text-green-600 transition-colors text-sm font-medium"
             >
-              Đồng hồ Nam
+              Men
             </Link>
             <Link
               to="/productfemale"
               className="text-gray-600 hover:text-green-600 transition-colors text-sm font-medium"
             >
-              Đồng hồ Nữ
+              Female
             </Link>
             <Link
               to="/smart-watches"
@@ -75,13 +75,19 @@ const Header = () => {
               to="/collections"
               className="text-gray-600 hover:text-green-600 transition-colors text-sm font-medium"
             >
-              Bộ sưu tập
+              Collection
             </Link>
             <Link
               to="/brands"
               className="text-gray-600 hover:text-green-600 transition-colors text-sm font-medium"
             >
-              Thương hiệu
+              Brand
+            </Link>
+            <Link
+              to="/contact"
+              className="text-gray-600 hover:text-green-600 transition-colors text-sm font-medium"
+            >
+              Contact
             </Link>
           </nav>
 
