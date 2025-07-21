@@ -18,29 +18,30 @@ const HeroBanner = () => {
     <div className="container mx-auto px-4 relative z-20">
         <div className="ml-auto w-full md:w-[50%] py-8">
           {/* Subtitle with responsive sizing */}
-          <h2 className="text-lg md:text-xl font-light tracking-widest text-gray-300 mb-2 md:mb-4 truncate">
+          <h2 className="text-lg md:text-xl font-light tracking-widest text-gray-300 mb-2 md:mb-4 truncate animate-fade-in" style={{animationDelay: '0.1s'}}>
             THE ULTIMATE OFFER ON WATCHES
           </h2>
           
           {/* Main title with line clamping */}
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-snug line-clamp-2">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-snug line-clamp-2 animate-fade-in" style={{animationDelay: '0.3s'}}>
             WATCHHOUSE SALE
           </h1>
           
           {/* Discount with responsive sizing */}
-          <div className="text-2xl md:text-4xl font-bold text-green-400 mb-6 md:mb-8">
+          <div className="text-2xl md:text-4xl font-bold text-green-400 mb-6 md:mb-8 animate-fade-in" style={{animationDelay: '0.5s'}}>
             UP TO 40% OFF
           </div>
           
           {/* Limited offer text */}
-          <div className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 italic">
+          <div className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 italic animate-fade-in" style={{animationDelay: '0.7s'}}>
             LIMITED TIME OFFER
           </div>
           
           {/* Button */}
           <Link
             to="/shop"
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-2 md:py-3 px-6 md:px-8 rounded-none transition duration-300 inline-block text-base md:text-lg"
+            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-2 md:py-3 px-6 md:px-8 rounded-none transition duration-300 inline-block text-base md:text-lg animate-fade-in"
+            style={{animationDelay: '0.9s'}}
           >
             SHOP NOW
           </Link>

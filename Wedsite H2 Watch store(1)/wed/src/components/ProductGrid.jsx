@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ShoppingCart, Heart } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (cardRef.current) {
+      cardRef.current.classList.add('animate-fade-in');
+    }
+  }, []);
 
   const handleAddToCart = (e) => {
     e.preventDefault(); // Ngăn chặn chuyển hướng khi nhấn nút
     addToCart(product);
+    // Hiệu ứng lắc nút khi click
+    const btn = e.currentTarget;
+    btn.classList.remove('animate-shake');
+    void btn.offsetWidth; // trigger reflow
+    btn.classList.add('animate-shake');
   };
 
   return (
     <Link 
       to={`/product/${product.id}`} 
-      className="block bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 group"
+      ref={cardRef}
+      className="block bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 group opacity-0"
     >
       <div className="relative overflow-hidden">
         <img 
@@ -27,14 +40,16 @@ const ProductCard = ({ product }) => {
           <div className="flex space-x-2">
             <button 
               onClick={handleAddToCart}
-              className="bg-white p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors duration-300"
+              className="bg-white p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors duration-300 active:scale-95 focus:outline-none animate-none"
               aria-label="Add to cart"
+              type="button"
             >
               <ShoppingCart size={18} />
             </button>
             <button 
-              className="bg-white p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors duration-300"
+              className="bg-white p-2 rounded-full hover:bg-green-500 hover:text-white transition-colors duration-300 active:scale-95 focus:outline-none"
               aria-label="Add to wishlist"
+              type="button"
             >
               <Heart size={18} />
             </button>

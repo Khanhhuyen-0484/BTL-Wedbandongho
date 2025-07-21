@@ -23,6 +23,13 @@ import OrderSuccess from './components/OrderSuccess';
 import Contact from './components/Contact';
 import { ToastContainer } from 'react-toastify'; // Thêm ToastContainer
 import 'react-toastify/dist/ReactToastify.css'; // Thêm CSS của react-toastify
+import ProductSmartwatch from './components/ProductSmartwatch';
+import CollectionPage from './components/CollectionPage';
+import CollectionClassic from './components/CollectionClassic';
+import CollectionSmart from './components/CollectionSmart';
+import CollectionLuxury from './components/CollectionLuxury';
+import SearchResultPage from './components/SearchResultPage';
+import BrandPage from './components/BrandPage';
 
 const HomePage = () => {
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -62,12 +69,19 @@ const App = () => {
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/productmen" element={<ProductMen />} />
                 <Route path="/productfemale" element={<ProductFemale />} />
+                <Route path="/smart-watches" element={<ProductSmartwatch />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/collections" element={<CollectionPage />} />
+                <Route path="/collections/classic" element={<CollectionClassic />} />
+                <Route path="/collections/smart" element={<CollectionSmart />} />
+                <Route path="/collections/luxury" element={<CollectionLuxury />} />
                 <Route path="/payment" element={<PaymentPage />} />
                 <Route path="/order-success" element={<OrderSuccess />} />
+                <Route path="/search" element={<SearchResultPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
+                <Route path="/brands" element={<BrandPage />} />
                 <Route element={<ProtectedRoute />}>
                   <Route path="/profile" element={<ProfilePage />} />
                   {/* Thêm các route cần đăng nhập khác tại đây */}

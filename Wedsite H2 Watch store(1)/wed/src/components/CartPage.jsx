@@ -16,7 +16,7 @@ const CartPage = () => {
   const navigate = useNavigate(); // Thêm hook này
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 animate-fade-in">
       <h1 className="text-3xl font-bold mb-8">Your Shopping Cart</h1>
       
       {cartItems.length === 0 ? (
@@ -24,7 +24,7 @@ const CartPage = () => {
           <p className="text-lg mb-4">Your cart is empty</p>
           <Link 
             to="/" 
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-transform duration-300 active:scale-95"
           >
             Tiếp tục mua sắm
           </Link>

@@ -34,7 +34,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 py-8 animate-fade-in">
       {/* Breadcrumb navigation */}
       <div className="container mx-auto px-4 mb-8">
         <nav className="flex items-center text-sm text-gray-600">
@@ -102,7 +102,7 @@ const ProductDetail = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button 
                   onClick={handleAddToCart}
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center transition-transform active:scale-95"
                 >
                   <svg 
                     className="w-5 h-5 mr-2" 
@@ -120,7 +120,7 @@ const ProductDetail = () => {
                   Thêm vào giỏ
                 </button>
                 
-                <button className="flex-1 border-2 border-gray-800 text-gray-800 hover:bg-gray-100 py-3 px-6 rounded-lg transition duration-300">
+                <button className="flex-1 border-2 border-gray-800 text-gray-800 hover:bg-gray-100 py-3 px-6 rounded-lg transition duration-300 transition-transform active:scale-95">
                   Mua ngay
                 </button>
               </div>
